@@ -37,7 +37,11 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
     .${clsCell} {
       min-height: ${rowHeight}px;
       flex-grow: 1;
-      flex-basis: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      flex-basis: auto;
     }`
     : `
     .${clsCell} {
