@@ -15,7 +15,7 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
       flex-wrap: nowrap;
       padding: 10px;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
       .${clsRow} {
         flex-wrap: wrap;
       }
@@ -26,7 +26,7 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
       padding: 10px;
       width: 100%;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
       .${stylePrefix}cell, .${stylePrefix}cell30, .${stylePrefix}cell70 {
         width: 100%;
         display: block;
