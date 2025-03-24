@@ -76,6 +76,7 @@ export type PluginOptions = {
 	 * @default 75
 	 */
 	rowHeight?: number;
+	breakpoint?: string;
 };
 declare const plugin: Plugin<PluginOptions>;
 

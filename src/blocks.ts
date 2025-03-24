@@ -3,7 +3,7 @@ import { PluginOptions } from '.';
 
 export default function(editor: Editor, opts: Required<PluginOptions>) {
   const bm = editor.BlockManager;
-  const { category, blocks, stylePrefix, flexGrid, rowHeight, addBasicStyle } = opts;
+  const { category, blocks, stylePrefix, flexGrid, rowHeight, addBasicStyle, breakpoint } = opts;
   const clsRow = `${stylePrefix}row`;
   const clsCell = `${stylePrefix}cell`;
   const styleRow = flexGrid
@@ -15,7 +15,7 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
       flex-wrap: nowrap;
       padding: 10px;
     }
-    @media (max-width: 600px) {
+    @media (max-width: ${breakpoint}) {
       .${clsRow} {
         flex-wrap: wrap;
       }
@@ -26,7 +26,7 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
       padding: 10px;
       width: 100%;
     }
-    @media (max-width: 600px) {
+    @media (max-width: ${breakpoint}) {
       .${stylePrefix}cell, .${stylePrefix}cell30, .${stylePrefix}cell70 {
         width: 100%;
         display: block;

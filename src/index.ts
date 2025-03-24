@@ -91,6 +91,7 @@ export type PluginOptions = {
    * @default 75
    */
   rowHeight?: number;
+  breakpoint?: string;
 };
 
 const plugin: Plugin<PluginOptions> = (editor, opts = {}) => {
@@ -120,6 +121,7 @@ const plugin: Plugin<PluginOptions> = (editor, opts = {}) => {
     labelVideo: 'Video',
     labelMap: 'Map',
     rowHeight: 75,
+    breakpoint: '850px',
     ...opts
   };
 
