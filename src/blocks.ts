@@ -90,14 +90,14 @@ export default function(editor: Editor, opts: Required<PluginOptions>) {
     class: clsRow,
     'data-gjs-droppable': `.${clsCell}`,
     'data-gjs-resizable': resizerBtm,
-    'data-gjs-name': 'Row'
+    'data-gjs-name': 'Div'
   };
 
   const colAttr: Record<string, any> = {
     class: clsCell,
     'data-gjs-draggable': `.${clsRow}`,
     'data-gjs-resizable': resizerRight,
-    'data-gjs-name': 'Cell'
+    'data-gjs-name': 'Div'
   };
 
   if (flexGrid) {
